@@ -12,6 +12,13 @@ UTF8Writer = codecs.getwriter('utf8')
 sys.stdout = UTF8Writer(sys.stdout)
  
 # Get your key here https://secure.meetup.com/meetup_api/key/
+
+with open('C:\Users\Bill\Documents\Invisible-College-Seattle\keys.json') as data_file:    
+    mykeys = json.load(data_file)
+
+api_key = mykeys['meetup']['key']
+
+
 city = "Seattle"
 state = "WA"
 per_page = 200
